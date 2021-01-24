@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
   main:
@@ -27,6 +27,3 @@ jobs:
         with:
           push: true
           tags: mustafamnr/nodeapp:latest
-      -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
